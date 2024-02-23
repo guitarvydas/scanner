@@ -1,5 +1,5 @@
 scanner {
-  tokens [tokens+] = ‛"tokens": [«tokens»\nfalse],\n"symbolTable" : [«_.symbolTableAsString ()»\nfalse]\n’
+  tokens [tokens+] = ‛"tokens": [«tokens»\nfalse\n],\n"symbolTable" : [«_.symbolTableAsString ()»\nfalse\n]\n’
   token_symbol [x] ‛«_.inventSymbolIndex (x.rwr ())»’ = ‛\n{"symbol" : «_.topSymbolIndex ()», "text" : "«x»"«_.killSymbolIndex ()»},’
   token_comment [x] = ‛\n{"comment" : "«x»"},’
   token_string [x] = ‛\n{"string" : "«x»"},’

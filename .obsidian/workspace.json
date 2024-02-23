@@ -148,7 +148,6 @@
   },
   "active": "2fa063b1afb565aa",
   "lastOpenFiles": [
-    "#Makefile#",
     "scanner.dSYM/Contents/Resources/DWARF/scanner",
     "scanner.dSYM/Contents/Resources/DWARF",
     "scanner.dSYM/Contents/Resources",
@@ -157,6 +156,7 @@
     "scanner.dSYM",
     "scanner",
     "scanner.o",
+    "#Makefile#",
     "#scannersupport.js#",
     "#scanner.rwr#",
     "0D/examples/vsh0d-main.drawio.svg",
