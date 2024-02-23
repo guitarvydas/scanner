@@ -1,6 +1,6 @@
 scanner {
   tokens [tokens+] = ‛«tokens»’
-  token_symbol [x] ‛«_.inventSymbolIndex (x)»’ = ‛\n{"symbol" : «_.topSymbolIndex ()», "text" : "«x»"«_.killSymbolIndex ()»},’
+  token_symbol [x] ‛«_.inventSymbolIndex (x.rwr ())»’ = ‛\n{"symbol" : «_.topSymbolIndex ()», "text" : "«x»"«_.killSymbolIndex ()»},’
   token_comment [x] = ‛\n{"comment" : "«x»"},’
   token_string [x] = ‛\n{"string" : "«x»"},’
   token_number [x] = ‛\n{"number" : «x»},’

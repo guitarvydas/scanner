@@ -1,10 +1,15 @@
 _ = {
     nameStack: [],
     counter: 0,
+    symbolTable :{},
     inventSymbolIndex : function (s) {
-	let index = _.counter;
+	let index = _.symbolTable [s];
+	if (index == undefined) {
+	    index = _.counter;
+	    _.symbolTable [s] = index;
+	    _.counter += 1;
+	}
 	_.nameStack.push (index);
-	_.counter += 1;
 	return "";
     },
     topSymbolIndex : function () {
