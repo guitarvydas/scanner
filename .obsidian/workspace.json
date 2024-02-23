@@ -1,0 +1,177 @@
+{
+  "main": {
+    "id": "8488ef294462a544",
+    "type": "split",
+    "children": [
+      {
+        "id": "c58be6aa6c53862e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2fa063b1afb565aa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9dec276dc6b728a6",
+    "type": "split",
+    "children": [
+      {
+        "id": "d27bb1b639125070",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ca34efe7a2da4ebd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7295f96291d2f730",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "69d53c4db6f46012",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c5f589bc7d326248",
+    "type": "split",
+    "children": [
+      {
+        "id": "a43bac866a0a49c1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "48f2a6fa7e6e8144",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1cd1e58bc0a29dc8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "38364432799816f6",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "44e3a7a70a441796",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "2fa063b1afb565aa",
+  "lastOpenFiles": [
+    "scanner.drawio",
+    "scanner.drwio",
+    "Makefile~",
+    "null.js",
+    "main.odin",
+    "dot-gitignore",
+    "___.drawio",
+    "Makefile",
+    "0D.xml",
+    "0D/util/rmhtml.js",
+    "0D/util/rmformatting.py",
+    "0D/examples/vsh0d-main.drawio.svg",
+    "0D/examples/top-main.drawio.svg",
+    "0D/examples/srw-main.drawio.svg",
+    "0D/examples/scm2js0d-main.drawio.svg",
+    "0D/examples/ptpascal0d-main.drawio.svg",
+    "0D/examples/llm0d-main.drawio.svg",
+    "0D/examples/helloworld0d-main.drawio.svg",
+    "0D/examples/gen0d-main.drawio.svg",
+    "0D/examples/find-and-replace-screenshot.png",
+    "0D/examples/find-and-replace-main.drawio.svg",
+    "0D/doc/ExampleIncludeCode.md",
+    "0D/README.md",
+    "0D/0D projects overview.md",
+    "README.md"
+  ]
+}

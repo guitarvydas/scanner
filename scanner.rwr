@@ -1,0 +1,24 @@
+scanner {
+  tokens [tokens+] = ‛«tokens»’
+  token_symbol [x] = ‛«x»’
+  token_comment [x] = ‛«x»’
+  token_string [x] = ‛«x»’
+  token_number [x] = ‛«x»’
+  token_character [x] = ‛«x»’
+
+  word [firstLetterOfWord moreLetters*] = ‛«firstLetterOfWord»«moreLetters»’
+  firstLetterOfWord [c] = ‛«c»’
+  moreLetters [c] = ‛«c»’
+
+  string [ldq stringChar* rdq] = ‛«rdq»«stringChar»«rdq»’
+  stringChar_escapedCharacter [sl c] = ‛\\«c»’
+  stringChar_other [c] = ‛«c»’
+
+  dq [c] = ‛«c»’
+
+  comment [slsl" c* nl] = ‛«slsl»«c»«nl»’
+
+  integer [digit+] = ‛«digit»’
+  
+  nl [c] = ‛«c»’
+}

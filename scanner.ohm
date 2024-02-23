@@ -1,0 +1,25 @@
+scanner {
+  tokens = token+
+  token =
+    | word -- symbol
+    | comment -- comment
+    | string -- string
+    | integer -- number
+    | any -- character
+
+  word = firstLetterOfWord moreLetters*
+  firstLetterOfWord = letter | "_"
+  moreLetters = letter | digit | "_"
+
+  string = dq stringChar* dq
+  stringChar =
+    | ~dq "\\" any -- escapedCharacter
+    | ~dq any -- other
+
+  dq = "\""
+  comment = "//" (~nl any)* nl
+
+  integer = digit+
+  
+  nl = "\n"
+}
