@@ -19,5 +19,11 @@ _ = {
 	_.nameStack.pop ();
 	return "";
     },
+    symbolTableAsString : function () {
+	s = "";
+	Object.keys (_.symbolTable).forEach (function (k) {
+	    s += `\n{"symbol" : "${k}", "index" : ${_.symbolTable [k]}},`;});
+	return s;
+    }
 }
 ,
