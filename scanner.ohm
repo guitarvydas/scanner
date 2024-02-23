@@ -5,6 +5,7 @@ scanner {
     | comment -- comment
     | string -- string
     | integer -- number
+    | nl -- newline
     | any -- character
 
   word = firstLetterOfWord moreLetters*

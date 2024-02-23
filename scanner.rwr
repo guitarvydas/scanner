@@ -1,10 +1,11 @@
 scanner {
   tokens [tokens+] = ‛«tokens»’
-  token_symbol [x] = ‛«x»’
-  token_comment [x] = ‛«x»’
-  token_string [x] = ‛«x»’
-  token_number [x] = ‛«x»’
-  token_character [x] = ‛«x»’
+  token_symbol [x] ‛«_.inventSymbolName ()»’ = ‛\n{"symbol" : "«_.symbolName ()»", "text" : "«x»"«_.killSymbolName ()»},’
+  token_comment [x] = ‛\n{"comment" : "«x»"},’
+  token_string [x] = ‛\n{"string" : "«x»"},’
+  token_number [x] = ‛\n{"number" : «x»},’
+  token_character [x] = ‛\n{"character" : "«x»"},’
+  token_newline [x] = ‛\n{"character" : "\\\\n"},’
 
   word [firstLetterOfWord moreLetters*] = ‛«firstLetterOfWord»«moreLetters»’
   firstLetterOfWord [c] = ‛«c»’

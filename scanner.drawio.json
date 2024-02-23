@@ -4,7 +4,7 @@
         "name": "main",
         "children": [
             {
-                "name": "'null.js'",
+                "name": "'scannersupport.js'",
                 "id": 10
             },
             {
@@ -50,7 +50,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "'null.js'",
+                    "name": "'scannersupport.js'",
                     "id": 10
                 },
                 "target_port": "\u237a"
@@ -136,7 +136,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "'null.js'",
+                    "name": "'scannersupport.js'",
                     "id": 10
                 },
                 "source_port": "\u237a",
