@@ -1,6 +1,6 @@
 scanner {
   tokens [tokens+] = ‛«tokens»’
-  token_symbol [x] ‛«_.inventSymbolName ()»’ = ‛\n{"symbol" : "«_.symbolName ()»", "text" : "«x»"«_.killSymbolName ()»},’
+  token_symbol [x] ‛«_.inventSymbolIndex (x)»’ = ‛\n{"symbol" : «_.topSymbolIndex ()», "text" : "«x»"«_.killSymbolIndex ()»},’
   token_comment [x] = ‛\n{"comment" : "«x»"},’
   token_string [x] = ‛\n{"string" : "«x»"},’
   token_number [x] = ‛\n{"number" : «x»},’
@@ -17,7 +17,7 @@ scanner {
 
   dq [c] = ‛«c»’
 
-  comment [slsl c* nl] = ‛«slsl»«c»«nl»’
+  comment [slsl c* nl] = ‛«c»’
 
   integer [digit+] = ‛«digit»’
   

@@ -1,16 +1,16 @@
 _ = {
     nameStack: [],
     counter: 0,
-    inventSymbolName : function () {
-	let name = `sym_${_.counter}`;
-	_.nameStack.push (name);
+    inventSymbolIndex : function (s) {
+	let index = _.counter;
+	_.nameStack.push (index);
 	_.counter += 1;
 	return "";
     },
-    symbolName : function () {
+    topSymbolIndex : function () {
 	return _.nameStack [_.nameStack.length - 1];
     },
-    killSymbolName : function () {
+    killSymbolIndex : function () {
 	_.nameStack.pop ();
 	return "";
     },
