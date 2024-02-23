@@ -2,8 +2,10 @@ LIBSRC=0D/odin/std
 ODIN_FLAGS ?= -debug -o:none
 D2J=0d/das2json/das2json
 
+dev: clean run
+
 run: scanner transpile.drawio.json
-	./scanner main scanner.drawio $(LIBSRC)/transpile.drawio
+	./scanner plain.js main scanner.drawio $(LIBSRC)/transpile.drawio
 
 scanner: scanner.drawio.json
 	odin build . $(ODIN_FLAGS)

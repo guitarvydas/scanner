@@ -16,7 +16,7 @@ scanner {
 
   dq [c] = ‛«c»’
 
-  comment [slsl" c* nl] = ‛«slsl»«c»«nl»’
+  comment [slsl c* nl] = ‛«slsl»«c»«nl»’
 
   integer [digit+] = ‛«digit»’
   

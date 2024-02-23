@@ -1,0 +1,200 @@
+[
+    {
+        "file": "scanner.drawio",
+        "name": "main",
+        "children": [
+            {
+                "name": "'null.js'",
+                "id": 10
+            },
+            {
+                "name": "'scanner.rwr'",
+                "id": 13
+            },
+            {
+                "name": "Transpile",
+                "id": 14
+            },
+            {
+                "name": "'scanner.ohm'",
+                "id": 16
+            },
+            {
+                "name": "'scanner'",
+                "id": 19
+            },
+            {
+                "name": "Read Text File",
+                "id": 25
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Read Text File",
+                    "id": 25
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'null.js'",
+                    "id": 10
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'scanner.rwr'",
+                    "id": 13
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'scanner.ohm'",
+                    "id": 16
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'scanner'",
+                    "id": 19
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'scanner'",
+                    "id": 19
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 14
+                },
+                "target_port": "grammar name"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'scanner.ohm'",
+                    "id": 16
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 14
+                },
+                "target_port": "ohmfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'scanner.rwr'",
+                    "id": 13
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 14
+                },
+                "target_port": "rwrfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'null.js'",
+                    "id": 10
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 14
+                },
+                "target_port": "rwrsupportfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Read Text File",
+                    "id": 25
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Transpile",
+                    "id": 14
+                },
+                "target_port": "input"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Transpile",
+                    "id": 14
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Transpile",
+                    "id": 14
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            }
+        ]
+    },
+    {
+        "file": "scanner.drawio",
+        "name": "...",
+        "children": [
+
+        ],
+        "connections": [
+
+        ]
+    }
+]
