@@ -148,7 +148,6 @@
   },
   "active": "2fa063b1afb565aa",
   "lastOpenFiles": [
-    "#hscanner.ohm#",
     "scanner.dSYM/Contents/Resources/DWARF/scanner",
     "scanner.dSYM/Contents/Resources/DWARF",
     "scanner.dSYM/Contents/Resources",
@@ -157,8 +156,9 @@
     "scanner.dSYM",
     "scanner",
     "scanner.o",
+    "#hscanner.rwr#",
+    "#hscanner.ohm#",
     "hscanner.ohm~",
-    "hscanner.rwr",
     "Screenshot 2024-02-23 at 10.46.43 PM.png",
     "unicode.js.md",
     "README.md",

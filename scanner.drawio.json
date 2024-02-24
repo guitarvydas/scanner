@@ -223,15 +223,15 @@
                 "id": 10
             },
             {
-                "name": "'scanner.rwr'",
+                "name": "'hscanner.rwr'",
                 "id": 13
             },
             {
-                "name": "'scanner.ohm'",
+                "name": "'hscanner.ohm'",
                 "id": 16
             },
             {
-                "name": "'scanner'",
+                "name": "'hscanner'",
                 "id": 19
             },
             {
@@ -252,7 +252,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "'scanner'",
+                    "name": "'hscanner'",
                     "id": 19
                 },
                 "target_port": "\u237a"
@@ -265,7 +265,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "'scanner.ohm'",
+                    "name": "'hscanner.ohm'",
                     "id": 16
                 },
                 "target_port": "\u237a"
@@ -278,7 +278,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "'scanner.rwr'",
+                    "name": "'hscanner.rwr'",
                     "id": 13
                 },
                 "target_port": "\u237a"
@@ -312,7 +312,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "'scanner'",
+                    "name": "'hscanner'",
                     "id": 19
                 },
                 "source_port": "\u237a",
@@ -390,7 +390,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "'scanner.rwr'",
+                    "name": "'hscanner.rwr'",
                     "id": 13
                 },
                 "source_port": "\u237a",
@@ -403,7 +403,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "'scanner.ohm'",
+                    "name": "'hscanner.ohm'",
                     "id": 16
                 },
                 "source_port": "\u237a",

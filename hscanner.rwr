@@ -1,5 +1,6 @@
-scanner {
+hscanner {
   tokens [tokens+] = ‛"tokens": [«tokens»\nfalse\n],\n"symbolTable" : [«_.symbolTableAsString ()»\nfalse\n]\n’
+  token_html [x] = ‛\n{"html" : "«x»"},’
   token_symbol [x] ‛«_.inventSymbolIndex (x.rwr ())»’ = ‛\n{"symbol" : «_.topSymbolIndex ()», "text" : "«x»"«_.killSymbolIndex ()»},’
   token_comment [x] = ‛\n{"comment" : "«x»"},’
   token_string [x] = ‛\n{"string" : "«x»"},’
@@ -8,10 +9,33 @@ scanner {
   token_newline [x] = ‛\n{"character" : "\\\\\\\\n"},’
   token_tab [x] = ‛\n{"character" : "\\\\\\\\t"},’
 
+  htmlElement_sub [_sub attributes? _gt innerHtmlElement _endsub] = ‛«_sub»«attributes»«_gt»«innerHtmlElement»«_endsub»’
+  htmlElement_font [_font attributes? _gt innerHtmlElement _endfont] = ‛«_font»«attributes»«_gt»«innerHtmlElement»«_endfont»’
+  htmlElement_mark [_mark attributes? _gt innerHtmlElement _endmark] = ‛«_mark»«attributes»«_gt»«innerHtmlElement»«_endmark»’
+  htmlElement_italic [_italic innerHtmlElement _enditalic] = ‛«_italic»«innerHtmlElement»«_enditalic»’
+  htmlElement_bold [_bold innerHtmlElement _endbold] = ‛«_bold»«innerHtmlElement»«_endbold»’
+  htmlElement_br [_br ws attrs+ _endbr] = ‛«_br»«ws»«attrs»«_endbr»’
+
+  innerHtmlElement_htmlElement [ws1 e ws2] = ‛«ws1»«e»«ws2»’
+  innerHtmlElement_basic [b+] = ‛«b»’
+
+  basic_word [c] = ‛«c»’
+  basic_string [c] = ‛«c»’
+  basic_htmlEscape [c] = ‛«c»’
+  basic_newline [c] = ‛«c»’
+  basic_tab [c] = ‛«c»’
+  basic_space [c] = ‛«c»’
+  basic_number [c] = ‛«c»’
+  basic_other [c] = ‛«c»’
+
+  attributes [as+] = ‛«as»’
+  attribute [_spc spaces word _eq str] = ‛«_spc»«spaces»«word»«_eq»«str»’
+
   word [firstLetterOfWord moreLetters*] = ‛«firstLetterOfWord»«moreLetters»’
   firstLetterOfWord [c] = ‛«c»’
   moreLetters [c] = ‛«c»’
 
+  htmlEscape [_pct hex _semi?] = ‛«_pct»«hex»«_semi»’
   string [ldq stringChar* rdq] = ‛«stringChar»’
   stringChar_escapedCharacter [sl c] = ‛\\«c»’
   stringChar_other [c] = ‛«c»’
@@ -21,6 +45,11 @@ scanner {
   comment [slsl c* nl] = ‛«c»’
 
   integer [digit+] = ‛«digit»’
+
+  hex_hex4 [d1 d2 d3 d4] = ‛«d1»«d2»«d3»«d4»’
+  hex_hex3 [d1 d2 d3] = ‛«d1»«d2»«d3»’
+  hex_hex2 [d1 d2] = ‛«d1»«d2»’
+  hdigit [c] = ‛«c»’
   
   nl [c] = ‛\\n’
   tab [c] = ‛\\\\t’

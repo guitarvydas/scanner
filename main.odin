@@ -24,6 +24,9 @@ components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
     zd.append_leaf (leaves, std.string_constant ("scanner"))
     zd.append_leaf (leaves, std.string_constant ("scanner.ohm"))
     zd.append_leaf (leaves, std.string_constant ("scanner.rwr"))
+    zd.append_leaf (leaves, std.string_constant ("hscanner"))
+    zd.append_leaf (leaves, std.string_constant ("hscanner.ohm"))
+    zd.append_leaf (leaves, std.string_constant ("hscanner.rwr"))
     zd.append_leaf (leaves, std.string_constant ("scannersupport.js"))
 }
 
