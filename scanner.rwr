@@ -5,13 +5,14 @@ scanner {
   token_string [x] = ‛\n{"string" : "«x»"},’
   token_number [x] = ‛\n{"number" : «x»},’
   token_character [x] = ‛\n{"character" : "«x»"},’
-  token_newline [x] = ‛\n{"character" : "\\\\n"},’
+  token_newline [x] = ‛\n{"character" : "\\\\\\\\n"},’
+  token_tab [x] = ‛\n{"character" : "\\\\\\\\t"},’
 
   word [firstLetterOfWord moreLetters*] = ‛«firstLetterOfWord»«moreLetters»’
   firstLetterOfWord [c] = ‛«c»’
   moreLetters [c] = ‛«c»’
 
-  string [ldq stringChar* rdq] = ‛«rdq»«stringChar»«rdq»’
+  string [ldq stringChar* rdq] = ‛«stringChar»’
   stringChar_escapedCharacter [sl c] = ‛\\«c»’
   stringChar_other [c] = ‛«c»’
 
@@ -21,5 +22,6 @@ scanner {
 
   integer [digit+] = ‛«digit»’
   
-  nl [c] = ‛«c»’
+  nl [c] = ‛\\n’
+  tab [c] = ‛\\\\t’
 }

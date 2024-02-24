@@ -6,6 +6,7 @@ scanner {
     | string -- string
     | integer -- number
     | nl -- newline
+    | tab -- tab
     | any -- character
 
   word = firstLetterOfWord moreLetters*
@@ -23,4 +24,5 @@ scanner {
   integer = digit+
   
   nl = "\n"
+  tab = "\t"
 }

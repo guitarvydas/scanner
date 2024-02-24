@@ -3,9 +3,9 @@ function f (a, b) {
     let c = 3;
     a = "Hello World";
     if (b) {
-	return true;
+        return true;
     } else {
-	return false;
-    }	
+        return false;
+    }   
 }
 
