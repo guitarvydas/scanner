@@ -1,0 +1,60 @@
+scanner {
+  tokens = token+
+  token =
+    | htmlElement -- html
+    | word -- symbol
+    | comment -- comment
+    | string -- string
+    | htmlEscape -- htmlEscape
+    | integer -- number
+    | nl -- newline
+    | tab -- tab
+    | any -- character
+
+  htmlElement =
+    | "<sub" attributes? ">"  innerHtmlElement "</sub>" -- sub
+    | "<font" attributes? ">" innerHtmlElement "</font>" -- font
+    | "<i>" innerHtmlElement "</i>" -- italic
+    | "<b>" innerHtmlElement "</b>" -- bold
+    | "<mark" attributes? ">" innerHtmlElement "</mark>" -- mark
+    | "<br" spaces attributes+ ">" -- br
+
+  innerHtmlElement =
+    | spaces htmlElement spaces -- htmlElement
+    | basic+ -- basic
+  basic =
+    | word -- word
+    | string -- string
+    | htmlEscape -- htmlEscape
+    | nl -- newline
+    | tab -- tab
+    | " " -- space
+    | integer -- number
+    | ~"<" ~">" any -- other
+
+  attributes = attribute+
+  attribute = " " spaces word "=" string
+    
+  word = firstLetterOfWord moreLetters*
+  firstLetterOfWord = letter | "_"
+  moreLetters = letter | digit | "_"
+
+  htmlEscape = "%" hex ";"? 
+  string = dq stringChar* dq
+  stringChar =
+    | ~dq "\\" any -- escapedCharacter
+    | ~dq any -- other
+
+  dq = "\""
+  comment = "//" (~nl any)* nl
+
+  integer = digit+
+  hex = 
+    | hdigit hdigit hdigit hdigit -- hex4
+    | hdigit hdigit hdigit -- hex3
+    | hdigit hdigit -- hex2
+  hdigit = digit | "A" .. "F"  
+
+  nl = "\n"
+  tab = "\t"
+}

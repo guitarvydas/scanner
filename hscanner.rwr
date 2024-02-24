@@ -1,0 +1,27 @@
+scanner {
+  tokens [tokens+] = ‛"tokens": [«tokens»\nfalse\n],\n"symbolTable" : [«_.symbolTableAsString ()»\nfalse\n]\n’
+  token_symbol [x] ‛«_.inventSymbolIndex (x.rwr ())»’ = ‛\n{"symbol" : «_.topSymbolIndex ()», "text" : "«x»"«_.killSymbolIndex ()»},’
+  token_comment [x] = ‛\n{"comment" : "«x»"},’
+  token_string [x] = ‛\n{"string" : "«x»"},’
+  token_number [x] = ‛\n{"number" : «x»},’
+  token_character [x] = ‛\n{"character" : "«x»"},’
+  token_newline [x] = ‛\n{"character" : "\\\\\\\\n"},’
+  token_tab [x] = ‛\n{"character" : "\\\\\\\\t"},’
+
+  word [firstLetterOfWord moreLetters*] = ‛«firstLetterOfWord»«moreLetters»’
+  firstLetterOfWord [c] = ‛«c»’
+  moreLetters [c] = ‛«c»’
+
+  string [ldq stringChar* rdq] = ‛«stringChar»’
+  stringChar_escapedCharacter [sl c] = ‛\\«c»’
+  stringChar_other [c] = ‛«c»’
+
+  dq [c] = ‛«c»’
+
+  comment [slsl c* nl] = ‛«c»’
+
+  integer [digit+] = ‛«digit»’
+  
+  nl [c] = ‛\\n’
+  tab [c] = ‛\\\\t’
+}
