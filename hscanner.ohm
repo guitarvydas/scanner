@@ -17,7 +17,7 @@ hscanner {
     | "<i>" innerHtmlElement "</i>" -- italic
     | "<b>" innerHtmlElement "</b>" -- bold
     | "<mark" attributes? ">" innerHtmlElement "</mark>" -- mark
-    | "<br" spaces attributes+ ">" -- br
+    | "<br" attributes? ">" -- br
 
   innerHtmlElement =
     | spaces htmlElement spaces -- htmlElement

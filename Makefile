@@ -2,7 +2,10 @@ LIBSRC=0D/odin/std
 ODIN_FLAGS ?= -debug -o:none
 D2J=0d/das2json/das2json
 
-all: dev-unicode
+all: dev-html
+
+dev-html: clean scanner transpile.drawio.json
+	./scanner html.js main scanner.drawio $(LIBSRC)/transpile.drawio
 
 dev-unicode: clean scanner transpile.drawio.json
 	./scanner unicode.js main scanner.drawio $(LIBSRC)/transpile.drawio

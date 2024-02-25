@@ -14,7 +14,7 @@ hscanner {
   htmlElement_mark [_mark attributes? _gt innerHtmlElement _endmark] = ‛«_mark»«attributes»«_gt»«innerHtmlElement»«_endmark»’
   htmlElement_italic [_italic innerHtmlElement _enditalic] = ‛«_italic»«innerHtmlElement»«_enditalic»’
   htmlElement_bold [_bold innerHtmlElement _endbold] = ‛«_bold»«innerHtmlElement»«_endbold»’
-  htmlElement_br [_br ws attrs+ _endbr] = ‛«_br»«ws»«attrs»«_endbr»’
+  htmlElement_br [_br attrs? _endbr] = ‛«_br»«attrs»«_endbr»’
 
   innerHtmlElement_htmlElement [ws1 e ws2] = ‛«ws1»«e»«ws2»’
   innerHtmlElement_basic [b+] = ‛«b»’
